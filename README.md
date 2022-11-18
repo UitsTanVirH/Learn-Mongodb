@@ -30,5 +30,5 @@ db.books.find({ rating: {$gte: 7}, author: "Name" })
 db.books.find({ rating: {$lt: 7} })
 db.books.find({ rating: {$lte: 7}, author: "Name" })
 db.books.find({$or: [{rating: 7}, {rating: 9}] })
-db.books.find({$or: [{ pages: {$lt: 300}}, {pages: {$gte: 400}} ]})
+db.books.find({$or: [{ pages: {$lt: 300}}, {pages: {$gte: 400} }]})
 ```
