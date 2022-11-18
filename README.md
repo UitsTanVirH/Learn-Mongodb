@@ -36,4 +36,5 @@ db.books.find({$or: [{ pages: {$lt: 300}}, {pages: {$gte: 400} }]})
 ### Using $in and $nin
 ```
 db.books.find({ rating: {$in: [7, 8, 9]}})
+db.books.find({ rating: {$nin: [7, 8, 9]}})
 ```
