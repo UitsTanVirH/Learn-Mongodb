@@ -38,3 +38,8 @@ db.books.find({$or: [{ pages: {$lt: 300}}, {pages: {$gte: 400} }]})
 db.books.find({ rating: {$in: [7, 8, 9]}})
 db.books.find({ rating: {$nin: [7, 8, 9]}})
 ```
+### Quering Arrays 
+```
+db.books.find({ genres: "fantasy" })
+db.books.find({"reviews.name": 'Luigi'})
+```
