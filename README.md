@@ -43,3 +43,12 @@ db.books.find({ rating: {$nin: [7, 8, 9]}})
 db.books.find({ genres: "fantasy" })
 db.books.find({"reviews.name": 'Luigi'})
 ```
+### Updating Documents
+```
+db.books.updateOne({_id: ObjectId("63711fd6051aa7bc672d14ca"), {$set: {rating: 8, pages: 355}})
+db.books.updateMany({author: "Terry Pratchett"}, {$set: {author: "Terry Pratchet"}})
+db.books.updateOne({_id: ObjectId("63711fd6051aa7bc672d14cb")}, {$inc: {pages: 2}})
+db.books.updateOne({_id: ObjectId("63711fd6051aa7bc672d14cb")}, {$push: {genres: "fantasy"}})
+db.books.updateOne({_id: ObjectId("63711fd6051aa7bc672d14cb")}, {$pull: {genres: "fantasy"}})
+```
+
